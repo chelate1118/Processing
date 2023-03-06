@@ -18,13 +18,13 @@ class Walker {
   // Randomly move up, down, left, right, or stay in one place
   void step() {
     
-    int choice = int(random(4));
+    float choice = random(1);
     
-    if (choice == 0) {
+    if (choice < 0.3) {
       x++;
-    } else if (choice == 1) {
+    } else if (choice < 0.5) {
       x--;
-    } else if (choice == 2) {
+    } else if (choice < 0.8) {
       y++;
     } else {
       y--;
