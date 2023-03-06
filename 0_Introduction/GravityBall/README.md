@@ -44,3 +44,6 @@ if (x > width - w/2) {
     xSpeed = -xSpeed;
 }
 ```
+
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/94269897/223278988-3e700f22-7ab6-4b71-a1fb-af6fe38ce031.png">
+
