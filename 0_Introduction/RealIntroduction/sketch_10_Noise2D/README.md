@@ -2,7 +2,7 @@
 
 다음과 같은 세 개의 상수를 정의하였다.
 
-```cpp
+```processing
 float increment = 0.01;
 int frameRateVal = 30;
 float frequency = 0.5;
@@ -11,13 +11,13 @@ float frequency = 0.5;
 increment는 실제 좌표가 noise의 인자로 들어갈 때 변환되는 scale을 의미하고, frameRateVal을 통해 애니메이션을 얼마나 자연스럽게 연출할지 결정하도록 했다.
 frequency는 noise함수의 z좌표 인자가 1초에 얼마나 증가하는지를 의미한다.
 
-```cpp
+```processing
 float bright = noise(xoff, yoff, frameCount/(float)frameRateVal*frequency)*255;
 ```
 
 위 코드와 같이 frameRate가 변화하더라도 애니메이션의 재생 속도는 변하지 않도록 설정하였으며, 속도는 오로지 frequency에 의존하게 된다.
 
-```cpp
+```processing
 noiseDetail(10,0.65f);
 ```
 
