@@ -1,16 +1,16 @@
 
-float increment = 0.02;
+float increment = 0.01;
+int frameRateVal = 30;
+float frequency = 0.5;
 
 void setup() {
+  noiseDetail(10,0.65f);
   size(640,360);
-  noLoop();
+  frameRate(frameRateVal);
 }
 
 void draw() {
   background(0);
-  
-  // Optional: adjust noise detail here
-  // noiseDetail(8,0.65f);
   
   loadPixels();
 
@@ -24,7 +24,7 @@ void draw() {
       yoff += increment; // Increment yoff
       
       // Calculate noise and scale by 255
-      float bright = noise(xoff,yoff)*255;
+      float bright = noise(xoff, yoff, frameCount/(float)frameRateVal*frequency)*255;
 
       // Try using this line instead
       //float bright = random(0,255);
