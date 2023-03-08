@@ -1,3 +1,5 @@
+# Bell Curve
+
 그래프를 plot하기 위해 모든 x좌표에 대한 y좌표를 저장할 수 있는 배열을 생성한다.
 
 ```processing
