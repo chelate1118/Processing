@@ -45,3 +45,10 @@ beginShape();
   }
   endShape();
 ```
+
+실행화면은 아래와 같다.
+
+<p align="center">
+<img width="202" alt="image" src="https://user-images.githubusercontent.com/94269897/223624919-cc1fb419-f892-4ed8-80bc-31eaacdb8a57.png">
+</p>
+
