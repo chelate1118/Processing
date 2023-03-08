@@ -1,5 +1,7 @@
 # GRAVITY BALL
 
+<p align="center"> <img width="552" alt="image" src="https://user-images.githubusercontent.com/94269897/223278988-3e700f22-7ab6-4b71-a1fb-af6fe38ce031.png"> </p>
+
 ballNumber 상수를 정의하였고, Ball 클래스의 배열을 정의하였다. 객체적 특성을 활용하여 모든 Ball의 동작을 for문으로 관리하였다. 자유로운 공의 움직임을 표현하기 위해 Ball의 초기 상태를 random으로 정의하였다.
 
 ```java
@@ -45,5 +47,4 @@ if (x > width - w/2) {
 }
 ```
 
-<p align="center"> <img width="552" alt="image" src="https://user-images.githubusercontent.com/94269897/223278988-3e700f22-7ab6-4b71-a1fb-af6fe38ce031.png"> </p>
-
+![gravityball](https://user-images.githubusercontent.com/94269897/223736879-9109604b-367c-4df3-a3f1-f638631573be.gif)
