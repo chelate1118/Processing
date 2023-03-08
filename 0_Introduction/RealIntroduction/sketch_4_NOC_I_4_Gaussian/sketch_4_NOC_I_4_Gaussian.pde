@@ -5,15 +5,17 @@ void setup() {
 }
 
 void draw() {
+  drawCircle();
+}
 
-  // Get a gaussian random number w/ mean of 0 and standard deviation of 1.0
-  float xloc = randomGaussian();
+void drawCircle()
+{
+  float dist = randomGaussian();
+  float sd = 60;
+  float angle = random(TWO_PI);
 
-  float sd = 60;                // Define a standard deviation
-  float mean = width/2;         // Define a mean value (middle of the screen along the x-axis)
-  xloc = ( xloc * sd ) + mean;  // Scale the gaussian random number by standard deviation and mean
-
-  fill(0, 10);
+  dist = ( dist * sd );
+  fill(randomGaussian()*30 + 150, randomGaussian()*30 + 30, randomGaussian()*30 + 100, 50);
   noStroke();
-  ellipse(xloc, height/2, 16, 16);   // Draw an ellipse at our "normal" random location
+  ellipse(dist * sin(angle) + width/2, dist * cos(angle) + height/2, 16, 16);
 }
