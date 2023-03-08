@@ -17,33 +17,33 @@ $$ f(x)={1 \over \sigma \sqrt{2 \pi}}e^{-{1 \over 2}({x-\mu \over \sigma})^2} $$
 해당 함숫값을 구하도록 `xcoord`, `sq2pi`, `xmsq`, `sdsq`변수를 정의하고 `heights` 변수의 최종 값을 저장한다.
 
 ```processing
-  for (int i = 0; i < heights.length; i++) {
-    float xcoord = map(i,0,width,-3,3);
-    float sq2pi = sqrt(2*PI);                   
-    float xmsq = -1*(xcoord-m)*(xcoord-m);      
-    float sdsq = sd*sd;                         
-    heights[i] = (1 / (sd * sq2pi)) * (pow(e, (xmsq/sdsq)));  
-  }
+for (int i = 0; i < heights.length; i++) {
+  float xcoord = map(i,0,width,-3,3);
+  float sq2pi = sqrt(2*PI);                   
+  float xmsq = -1*(xcoord-m)*(xcoord-m);      
+  float sdsq = sd*sd;                         
+  heights[i] = (1 / (sd * sq2pi)) * (pow(e, (xmsq/sdsq)));  
+}
 ```
 
 그래프를 plot할 스타일을 지정하고, 
 
 ```processing
 stroke(0);
-  strokeWeight(2);
-  noFill();
+strokeWeight(2);
+noFill();
 ```
 
 `beginShape()`와 `endShape()`함수 사이에 `vertex()`함수를 사용하여 그래프의 각 꼭짓점을 정의한다.
 
 ```processing
 beginShape();
-  for (int i = 0; i < heights.length-1; i++) {
-    float x = i; 
-    float y = map(heights[i], 0, 1, height-2, 2);
-    vertex(x, y);
-  }
-  endShape();
+for (int i = 0; i < heights.length-1; i++) {
+  float x = i; 
+  float y = map(heights[i], 0, 1, height-2, 2);
+  vertex(x, y);
+}
+endShape();
 ```
 
 실행화면은 아래와 같다.
