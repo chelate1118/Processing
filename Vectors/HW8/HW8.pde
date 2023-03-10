@@ -2,11 +2,14 @@
 final int row = 10;
 final int col = 10;
 final int dist = 50;
+final int padding = 3;
+final int minRad = 5;
 PVector mousePosition = new PVector();
 Circle[][] circles = new Circle[row][col];
 
 void setup()
 {
+    colorMode(HSB, 360, 100, 100);
     noStroke();
     size(500, 500);
 
@@ -19,7 +22,7 @@ void setup()
 
 void draw()
 {
-    background(255);
+    background(50, 10, 92);
     mousePosition.x = mouseX;
     mousePosition.y = mouseY;
 
