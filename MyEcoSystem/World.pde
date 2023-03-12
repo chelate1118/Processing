@@ -13,7 +13,10 @@ class World {
       PVector l = new PVector(random(width),random(height));
       agents.add(new Fish(l));
     }
-    
+    for (int i = 0; i < num; i++) {
+      PVector l = new PVector(random(width),random(height));
+      agents.add(new Lotus(l));
+    }
   }
 
   void born(float x, float y) {

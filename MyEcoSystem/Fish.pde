@@ -12,6 +12,21 @@ class Fish extends Agent {
     super(l);
     
   }
+
+  void update() {
+    super.update();
+    world.agents.forEach((agent) -> {
+      if (agent instanceof Lotus) {
+        Lotus lotus = (Lotus)agent;
+        if (location.dist(lotus.location) < 50 
+            && lotus.health > Lotus.minHealth
+            && health < 200) {
+          lotus.health -= 5;
+          health += 2;
+        }
+      }
+    });
+  }
   
   void drawBody() {
     pushMatrix();
