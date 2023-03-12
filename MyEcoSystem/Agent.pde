@@ -72,8 +72,12 @@ class Agent {
   void simpleShape() {
       ellipseMode(CENTER);
       stroke(0,health);
-      fill(0, health);
+      setColor();
       ellipse(location.x, location.y, r, r);
+  }
+
+  void setColor() {
+    fill(0, health);
   }
 
   // Death

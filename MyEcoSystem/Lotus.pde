@@ -1,6 +1,6 @@
 class Lotus extends Agent {
     static final int maxHealth = 200;
-    static final int minHealth = 20;
+    static final int minHealth = 100;
     float angle;
 
     Lotus(PVector l) {
@@ -30,6 +30,10 @@ class Lotus extends Agent {
                 }
             endShape();
         popMatrix();
+    }
+
+    void setColor() {
+        fill(97, 113, 67, health);
     }
 
     boolean dead() {
