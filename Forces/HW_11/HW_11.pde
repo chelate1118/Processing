@@ -4,6 +4,7 @@ final Car car = new Car();
 final boolean[] keys = new boolean[4];
 
 void setup() {
+    textSize(20);
     size(1000, 800);
 }
 
@@ -12,6 +13,8 @@ void draw() {
     rail.draw();
     car.update();
     car.draw();
+    fill(0);
+    text("use w, a, s, d to move the car", 30, 30);
 }
 
 void keyPressed() {
