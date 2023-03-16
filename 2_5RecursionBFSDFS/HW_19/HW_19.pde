@@ -4,7 +4,7 @@ boolean[] used = new boolean[360];
 int cnt = 0;
 
 void setup() {
-  frameRate(500);
+  // frameRate(500);
     size (1000, 1000);
     background(255);
 
@@ -35,7 +35,7 @@ void draw() {
     fill(0);
     textSize(20);
     text("Mouse click to merge sort colors", 50, 50);
-    drawDisk(min(frameCount, cnt));
+    drawDisk(min(frameCount, cnt/3));
 }
 
 void drawDisk(int x) {
@@ -84,7 +84,7 @@ void merge(int array[], int p, int q, int r) {
       
       cnt++;
       for (int l=0; l<360; l++) {
-        hue[cnt][l] = array[l];
+        hue[cnt/3][l] = array[l];
       }
     }
 
@@ -94,7 +94,7 @@ void merge(int array[], int p, int q, int r) {
       k++;
       cnt++;
       for (int l=0; l<360; l++) {
-        hue[cnt][l] = array[l];
+        hue[cnt/3][l] = array[l];
       }
     }
 
@@ -104,7 +104,7 @@ void merge(int array[], int p, int q, int r) {
       k++;
       cnt++;
       for (int l=0; l<360; l++) {
-        hue[cnt][l] = array[l];
+        hue[cnt/3][l] = array[l];
       }
     }
   }
